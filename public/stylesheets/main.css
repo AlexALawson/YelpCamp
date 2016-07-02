@@ -1,0 +1,59 @@
+.jumbotron {
+    background-color:#c9d8c5;
+    color: #64706c;
+    border-radius: 0px;
+}
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+body {
+    background-color: #f0eceb;
+    color: #5a5c51;
+}
+.navbar  {
+    background-color: #1d2120;
+    color: #f0eceb;
+}
+
+.btn {
+    border: 0px;
+}
+
+h4 {
+    color: #f0eceb;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.list-group-item.active {
+    background-color: #a8b6bf;
+    border:0px;
+}
+
+
+.btn {
+    color: white;
+}
+
+#delete-form {
+    display: inline
+}
+
+.thumbnail{
+    background-color: #64706c;
+    color: #f0eceb;
+}
+
+.thumbnail img {
+    width: 100%;
+    
+}
+
+#login {
+    width: 300px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
