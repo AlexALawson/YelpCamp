@@ -1,19 +1,47 @@
-<% include partials/header %> 
+<html>
+    <head>
+        <title>YelpCamp: Your Campground Review Site</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,500,300' rel='stylesheet' type='text/css'>
+   
+    </head>
+    <body class="landing">
+        
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="/">Yelp Camp</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <% if(!currentUser){ %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Sign Up</a></li>
+                <% } else { %>
+                <li><a href="#">Signed in As <%= currentUser.username %></a></li>
+                <li><a href="/logout">Log Out</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <% if (error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert"><%=error%></div>
+    <% } %> 
+    <% if (success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert"><%=success%></div>
+    <% } %>
+</div>
 
+   <h1 class="logo">Yelp Camp</h1>
+   <div class="container" id="landingContainer">
+   <h4 class="tagline">Your Campsite Review Headquarters</h4>
 
-<h1>Landing page</h1>
+<a class="btn btn-primary btn-lg" id="landingbutton" href="/campgrounds">View all campgrounds</a>
+ 
 
-<p>Celiac tousled aesthetic master cleanse selfies. Kickstarter synth roof party street art, tacos scenester pabst XOXO marfa. 
-Blue bottle cardigan seitan PBR&B, pop-up before they sold out flannel brooklyn. Forage schlitz gastropub fixie post-ironic umami. 
-Thundercats freegan vice butcher hashtag, actually echo park yr lumbersexual single-origin coffee slow-carb brunch disrupt 90's.
-Artisan readymade retro migas brunch, intelligentsia venmo blue bottle. IPhone sartorial portland craft beer.
-
-Deep v schlitz whatever, selvage VHS wolf gluten-free pabst man bun. YOLO gochujang yr celiac selfies, kogi messenger bag keytar ramps hashtag. 
-PBR&B tacos pinterest quinoa, marfa 8-bit intelligentsia photo booth leggings asymmetrical vice kale chips deep v shoreditch put a bird on it. 
-Street art shabby chic selvage sartorial, listicle try-hard locavore kogi pork belly pabst gluten-free tattooed. Single-origin coffee roof party
-green juice banh mi. Slow-carb before they sold out chillwave, 
-thundercats kinfolk pork belly ethical chambray photo booth fashion axe kale chips asymmetrical meditation. Ugh microdosing pour-over tilde kale chips.</p>
-
-<a href="/campgrounds">View all campgrounds</a>
 
 <% include partials/footer %> 
+    

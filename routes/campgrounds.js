@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campgrounds");
 var middleware = require("../middleware")
+var request = require('request')
 
 router.get("/", function(req, res){
     //get all campgrounds from DB
@@ -20,13 +21,15 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     var name = req.body.name;
     var image = req.body.image;
     var desc = req.body.description;
+    var price = req.body.price; 
+    var address = req.body.address;
     var author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newCampground = {name: name, image: image, description: desc, author: author};
-    
-    //create new campground and save to db
+    var newCampground = {name: name, image: image, description: desc, price: price, author: author, address: address };
+
+//create new campground and save to db
     Campground.create(newCampground, function(err, newlyCreated){
         if(err){
             console.log(err);
@@ -37,6 +40,8 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         }
     });
 });
+
+// 
 
 router.get("/new", middleware.isLoggedIn, function(req, res){
     res.render("campgrounds/new")
@@ -54,7 +59,7 @@ router.get("/:id", function(req, res){
     })
 });
 
-//edit campground rout
+//edit campground route
 
 router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res) {
     Campground.findById(req.params.id, function(err, foundCampground){

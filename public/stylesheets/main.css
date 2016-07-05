@@ -1,29 +1,85 @@
 .jumbotron {
     background-color:#c9d8c5;
-    color: #64706c;
+    color: white;
     border-radius: 0px;
+    width: 100%;
 }
 .container .jumbotron {
     border-radius: 0px;
+    background: url("https://images.unsplash.com/photo-1465508372103-60fc5e6df917?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=53929d00a9e63e7ddae374681d27c15c");
+    background-size: 100%}
+
+.navbar  {
+    background-color: #ff8334;
+    color: white;
+    padding: 0;
+    margin-bottom: 0;
+    border: 0;
 }
 
-body {
-    background-color: #f0eceb;
-    color: #5a5c51;
-}
-.navbar  {
-    background-color: #1d2120;
-    color: #f0eceb;
+.tagline {
+    color: white;
+    padding: 20px;
+    font-size: 30px; 
+    font-weight: 400;
 }
 
 .btn {
     border: 0px;
 }
 
-h4 {
+.navbar-default .navbar-brand {
+    color: white; 
+    font-family: 'Pacifico', serif;
+    
+}
+
+.navbar-default #navbar {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a  {
+    color: white;
+}
+#landingContainer {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.index {
+   font-weight: 300;
+   font-size: 40px;
+}
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 100px;
+    padding: 60px;
+    text-align: center;
+    
+}
+
+body {
+    font-family: 'Roboto', serif;
+}
+
+.landing {
+    background: url("https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=28288b1af03ab13b4edac3df8383aa9b") no-repeat center center fixed; 
+background-size: cover;;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+h4 .tagline {
     color: #f0eceb;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 30px;
+    padding: 40px;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
 }
 
 .list-group-item.active {
@@ -31,23 +87,41 @@ h4 {
     border:0px;
 }
 
-
-.btn {
-    color: white;
+#jumbo {
+    width: 100%;
+    padding: 0;
 }
+
+
 
 #delete-form {
     display: inline
 }
 
+.name {
+    color: White;
+}
+
 .thumbnail{
-    background-color: #64706c;
-    color: #f0eceb;
+    background-color: #ff8334;
+}
+
+.thumbnail h4 {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    
 }
 
 .thumbnail img {
     width: 100%;
     
+}
+
+
+
+.btn-default {
+    background-color: #ff8334;
 }
 
 #login {

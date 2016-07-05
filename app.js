@@ -9,16 +9,15 @@ var express                 = require("express"),
     methodOverride          = require("method-override"),
     LocalStrategy           = require("passport-local"),
     User                    = require("./models/user"),
-    flash                   = require("connect-flash");
+    flash                   = require("connect-flash"),
+    request                 = require("request");
     
 var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
     authRoutes          = require("./routes/index")
 
-
-// // mongoose.connect("mongodb://localhost/yelp_camp");
-// mongoose.connect("mongodb://boots525:awrt30ml@ds011775.mlab.com:11775/yelpcamp");
-mongoose.connect(process.env.DATABASEURL)
+var url = process.env.DATABASEURL || "mongodb://localhost/YelpCamp"
+mongoose.connect(url)
     
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs"); 
